@@ -1,0 +1,26 @@
+.img{
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.heder-img{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+/*.iconic{*/
+/*  float: right;*/
+/*}*/
+.desc{
+  font-family: Arial;
+  color: white;
+  border-bottom-color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  width: 99%;
+  height: 25%;
+  padding: 0;
+}

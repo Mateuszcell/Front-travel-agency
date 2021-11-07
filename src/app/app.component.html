@@ -1,0 +1,23 @@
+<app-header (emiter)="navigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-log-in *ngIf="future==='add'"></app-log-in>
+      <app-continent *ngIf="future==='cont'"></app-continent>
+     <app-search *ngIf="future ==='search'">
+     </app-search>
+<div class="img" *ngIf="future==='home'">
+  <img src="{{trav.img}}" width="1150px" height="500px">
+<div class="heder-img">
+  <img class="iconic" src="favicon.ico">
+  <h2>{{trav.destination}}</h2>
+</div>
+  <div class="desc">
+    <p>Malediwy – archipelag oraz państwo wyspiarskie o tej samej nazwie, położone na Oceanie Indyjskim, ok. 500 km na południowy zachód od południowego krańca Indii. W XVI wieku wyspami starali się zawładnąć Portugalczycy i Holendrzy</p>
+</div>
+    </div>
+    </div>
+
+</div>
+</div>
+<app-footer></app-footer>

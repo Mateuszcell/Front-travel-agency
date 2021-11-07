@@ -1,0 +1,30 @@
+<form #postForm="ngForm" (ngSubmit)="conAdd(postForm.value)">
+<!--  <div class="form-group">-->
+<!--    <label for="title">Title</label>-->
+<!--    <input-->
+<!--      type="text"-->
+<!--      class="form-control"-->
+<!--      id="title"-->
+<!--      required-->
+<!--      ngModel-->
+<!--      name="title"-->
+<!--    />-->
+<!--  </div>-->
+  <div class="form-group">
+    <label for="continent">Continent</label>
+    <input
+      type="text"
+      class="form-control"
+      id="continent"
+      required ngModel
+      name="continent"
+    />
+  </div>
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="!postForm.valid"
+    >
+      Send Post
+    </button>
+</form>

@@ -1,0 +1,14 @@
+<div class="containerx">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="search-in">
+        <form #postForm='ngForm' (ngSubmit)="getIt(postForm.value)">
+        <label for="continent">Search the Continent:</label>
+        <input type="search" id="continent" name="q"
+               aria-label="Search through site content" required ngModel name="continent">
+        <button type="submit">Search</button>
+        </form>
+    </div>
+  </div>
+</div>
+</div>

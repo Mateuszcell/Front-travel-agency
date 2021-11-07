@@ -1,0 +1,10 @@
+.containerx{
+  height: 400px;
+  width: 400px;
+}
+.search-in{
+  display: block;
+  margin: 0 auto;
+  /*left: 50%;*/
+  /*top: 50%;*/
+}
