@@ -1,30 +1,99 @@
+<h2>Data Base Option</h2>
+<div>
+  <ul class="nav navbar->nav navbar-left">
+    <li class="dropdown" appDropdown>
+      <button href="#" class="dropdown-toggle" role="button">Add <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#"(click)="onSelect(1)">Continent</a></li>
+        <li><a href="#"(click)="onSelect(2)">Country</a></li>
+        <li><a href="#"(click)="onSelect(3)">City</a></li>
+        <li><a href="#"(click)="onSelect(4)">Hotel</a></li>
+        <li><a href="#"(click)="onSelect(5)">AirPort</a></li>
+
+      </ul>
+    </li>
+  </ul>
+</div>
+<div>
+  <ul class="nav navbar->nav navbar-left">
+    <li class="dropdown" appDropdown>
+      <button href="#" class="dropdown-toggle" role="button">Delete <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+                <li><a href="#"(click)="onSelect(1)">Continent</a></li>
+                <li><a href="#"(click)="onSelect(2)">Country</a></li>
+                <li><a href="#"(click)="onSelect(3)">City</a></li>
+                <li><a href="#"(click)="onSelect(4)">Hotel</a></li>
+                <li><a href="#"(click)="onSelect(5)">AirPort</a></li>
+
+      </ul>
+    </li>
+  </ul>
+  <div class="row"></div>
+</div>
 <form #postForm="ngForm" (ngSubmit)="conAdd(postForm.value)">
-<!--  <div class="form-group">-->
-<!--    <label for="title">Title</label>-->
-<!--    <input-->
-<!--      type="text"-->
-<!--      class="form-control"-->
-<!--      id="title"-->
-<!--      required-->
-<!--      ngModel-->
-<!--      name="title"-->
-<!--    />-->
-<!--  </div>-->
-  <div class="form-group">
-    <label for="continent">Continent</label>
+  <div class="form-group" *ngIf="step===2">
+    <label for="Country">Country</label>
     <input
       type="text"
       class="form-control"
-      id="continent"
-      required ngModel
-      name="continent"
+      id="Country"
+      required
+      ngModel
+      name="Country"
     />
   </div>
-    <button
-      class="btn btn-primary"
-      type="submit"
-      [disabled]="!postForm.valid"
-    >
-      Send Post
-    </button>
+  <div class="form-group" *ngIf="step===1">
+  <label for="continent">Continent</label>
+  <input
+    type="text"
+    class="form-control"
+    id="continent"
+    required ngModel
+    name="continent"
+  />
+</div>
+  <div class="form-group" *ngIf="step===3">
+    <label for="City">City</label>
+    <input
+      type="text"
+      class="form-control"
+      id="city"
+      required ngModel
+      name="City"
+    />
+    </div>
+  <div class="form-group" *ngIf="step===4">
+
+    <label for="Airport">AirPort</label>
+    <input
+      type="text"
+      class="form-control"
+      id="AirPort"
+      required ngModel
+      name="AirPort"
+    />
+    <label for="Hotel">Hotel</label>
+    <input
+      type="text"
+      class="form-control"
+      id="Hotel"
+      required ngModel
+      name="Hotel"
+    />
+  </div>
+<!--    <button-->
+<!--      class="btn btn-primary"-->
+<!--      type="submit"-->
+<!--      [disabled]="!postForm.valid"-->
+<!--    >-->
+<!--      Next-->
+<!--    </button>-->
+<!--  <button-->
+<!--    class="btn btn-primary"-->
+<!--    type="submit"-->
+<!--    [disabled]="step===4"-->
+<!--    (click)="sendData()"-->
+<!--  >-->
+<!--    Send Data-->
+<!--  </button>-->
 </form>

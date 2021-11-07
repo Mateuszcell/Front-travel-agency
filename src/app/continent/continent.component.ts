@@ -8,18 +8,27 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ContinentComponent implements OnInit {
 name:string="";
-
-  conAdd(postData:{continent:string}){
-   this.name=postData.continent
-    this.http.post("http://localhost:8080/api/travel-agency/addContinent",{"name":this.name}).subscribe(
-      responseDate=> {
-        console.log(postData.continent);
-      }
-    )
+step: any = 0;
+tab: string[] =[];
+  conAdd(postData:{na:string}){
+    if(this.step<4){
+    this.step=this.step + 1;}
+   this.name=postData.na
+    this.tab.push(postData.na);
+    // this.http.post("http://localhost:8080/api/travel-agency/addContinent",{"name":this.name}).subscribe(
+    //   responseDate=> {
+    //     console.log(postData);
+    //   }
+    // )
     console.log(postData);
+    console.log(this.tab)
   }
+sendData(){
 
-  constructor(private  http: HttpClient) { }
+}
+onSelect(num:any){this.step=num}
+  constructor(private service:HttpClient){
+  }
 
   ngOnInit(): void {
   }
