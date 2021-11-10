@@ -12,6 +12,8 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { LogInComponent } from './log-in/log-in.component';
 import { ContinentComponent } from './continent/continent.component';
+import { AddTourComponent } from './add-tour/add-tour.component';
+import {httpService} from "./continent/http.service";
 
 @NgModule({
   declarations: [
@@ -23,14 +25,15 @@ import { ContinentComponent } from './continent/continent.component';
     HomeComponent,
     AddTravelComponent,
     LogInComponent,
-    ContinentComponent
+    ContinentComponent,
+    AddTourComponent
   ],
     imports: [
         BrowserModule,
         FormsModule,
       HttpClientModule
     ],
-  providers: [],
+  providers: [httpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
